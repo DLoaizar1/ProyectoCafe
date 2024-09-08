@@ -1,0 +1,104 @@
+/* register.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4; /* Opcional, para un fondo más suave */
+}
+
+.container {
+    width: 90%;
+    max-width: 500px; /* Ancho máximo para pantallas grandes */
+    height: auto; /* Ajuste automático para la altura */
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white; /* Fondo blanco para el contenedor */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Añadir margen para separar del formulario */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, button {
+        font-size: 16px; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Ajustar el tamaño del título */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    input, button {
+        font-size: 14px; /* Ajustar aún más el tamaño de la fuente */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Ajustar el tamaño del título */
+    }
+}
