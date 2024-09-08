@@ -36,6 +36,7 @@ def register():
 
     return render_template('register.html')
 
+@auth_bp.route('/logout')
 def logout():
     session.pop('user_id', None)
-    return redirect(url_for('home.home'))
+    return redirect(url_for('auth.login'))
