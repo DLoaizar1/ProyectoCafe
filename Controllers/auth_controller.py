@@ -40,3 +40,5 @@ def register():
 def logout():
     session.pop('user_id', None)
     return redirect(url_for('auth.login'))
+
+#Funcionando inicio de sesión y registro de usuario
