@@ -1,37 +1,49 @@
-/* login.css */
-
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: #f4f4f4; /* Fondo opcional para una mejor apariencia */
+    background-color: #f4f4f4;
 }
 
+/* CSS */
 .container {
-    display: flex;
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    width: 90%;
-    max-width: 800px; /* Ancho máximo para pantallas grandes */
-    height: auto; /* Ajusta automáticamente la altura */
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: white;
+    max-height: 80vh;
     overflow: hidden;
-    background-color: white; /* Fondo blanco para el contenedor */
+    padding: 0;
+    margin: 0;
 }
 
 .image-container {
-    display: none; /* Oculta la imagen en pantallas pequeñas */
+    flex: 1;
+    display: block;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .form-container {
-    padding: 20px;
+    padding: 40px 20px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
 }
 
 h1 {
@@ -41,10 +53,6 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
 }
 
 input {
@@ -81,27 +89,9 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Media queries para hacer el diseño responsive */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row; /* Cambia a fila en pantallas grandes */
-    }
-
-    .image-container {
-        flex: 1;
-        background: url('/static/login-image.jpg') no-repeat center center;
-        background-size: cover;
-        display: block; /* Muestra la imagen en pantallas grandes */
-    }
-
-    .form-container {
-        flex: 1;
-    }
-}
-
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column; /* En pantallas pequeñas, la imagen se oculta */
     }
 
     .image-container {

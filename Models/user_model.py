@@ -1,5 +1,5 @@
 from datetime import datetime
-from Models import db  # Importa db desde models/__init__.py
+from Models import db  
 
 class User(db.Model):
     __tablename__ = 'Users'
@@ -28,3 +28,11 @@ class User(db.Model):
         db.session.add(new_user)
         db.session.commit()
         return new_user
+
+    @classmethod
+    def find_by_id(cls, user_id):
+        return cls.query.filter_by(id=user_id).first()
+
+    def update_password(self, new_password):
+        self.Password = new_password
+        db.session.commit()
