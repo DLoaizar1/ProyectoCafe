@@ -1,16 +1,27 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Chatbot de Café</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleChat.css') }}">
 </head>
 <body>
-    <h1>Funcionando, fiuuumba</h1>
-    
-    <a href="{{ url_for('auth.logout') }}">
-        <button>Logout</button>
-    </a>
-    
+    <div class="container">
+        <h1>Chatbot de Café</h1>
+        <form action="{{ url_for('chat.chatbot') }}" method="POST">
+            <label for="question">Pregunta sobre el café:</label>
+            <input type="text" id="question" name="question" required>
+            <button type="submit">Enviar</button>
+        </form>
+        
+        {% if response %}
+            <div class="chat-response">
+                <h3>Respuesta del Chatbot:</h3>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
 </body>
 </html>

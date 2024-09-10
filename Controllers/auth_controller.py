@@ -18,10 +18,9 @@ def login():
             user.update_active_date()
             # Guardar el UserID en la sesión
             session['user_id'] = user.UserId
-            flash('Login successful', 'success')
             return redirect(url_for('home.home'))
         else:
-            flash('Invalid credentials', 'danger')
+            flash('Crrdenciales incorrectas', 'danger')  # Mostrar mensaje de error si las credenciales son inválidas
     return render_template('login.html')
 
 @auth_bp.route('/register', methods=['GET', 'POST'])
@@ -32,7 +31,7 @@ def register():
         email = request.form['email']
         user = User.create_user(username, password, email)
         session['user_id'] = user.UserId
-        flash('User registered successfully', 'success')
+        flash('Usuario registrado', 'success')
         return redirect(url_for('home.home'))
 
     return render_template('register.html')
@@ -51,11 +50,10 @@ def forgot_password():
         user = User.find_by_email(email)
         if user:
             send_reset_email(user)  # Enviar correo con el enlace para restablecer la contraseña
-            flash('Email sent with instructions to reset your password', 'success')
+            flash('Email enviado con instrucciones a su correo', 'success')
             return redirect(url_for('auth.login'))
         else:
-            flash('Email not found', 'danger')
-            print(f"No se encontró usuario con el email: {email}")  # Punto de depuración
+            flash('Correo no encontrado', 'danger')  # Punto de depuración
     return render_template('forgot_password.html')
 
 # Restablecer Contraseña con token
@@ -63,13 +61,13 @@ def forgot_password():
 def reset_password(token):
     user = verify_reset_token(token)
     if not user:
-        flash('The reset token is invalid or has expired.', 'danger')
+        flash('El token ha expirado.', 'danger')
         return redirect(url_for('auth.forgot_password'))
 
     if request.method == 'POST':
         password = generate_password_hash(request.form['password'])
         user.update_password(password)
-        flash('Password reset successfully', 'success')
+        flash('Contraseña cambiada', 'success')
         return redirect(url_for('auth.login'))
 
     return render_template('reset_password.html')
