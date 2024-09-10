@@ -15,7 +15,6 @@ country_mapping = {
     "mexico": "Mexico",
     "usa": "United States",
     "united states": "United States",
-    # Agrega más mapeos según sea necesario
 }
 
 chat_bp = Blueprint('chat', __name__)
