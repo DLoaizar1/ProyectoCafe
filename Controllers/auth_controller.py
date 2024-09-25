@@ -14,13 +14,11 @@ def login():
 
         user = User.find_by_username(username)
         if user and check_password_hash(user.Password, password):
-            # Actualizar la fecha de inicio de sesión
             user.update_active_date()
-            # Guardar el UserID en la sesión
             session['user_id'] = user.UserId
             return redirect(url_for('home.home'))
         else:
-            flash('Crrdenciales incorrectas', 'danger')  # Mostrar mensaje de error si las credenciales son inválidas
+            flash('Crrdenciales incorrectas', 'danger')  
     return render_template('login.html')
 
 @auth_bp.route('/register', methods=['GET', 'POST'])
@@ -49,11 +47,11 @@ def forgot_password():
         email = request.form['email']
         user = User.find_by_email(email)
         if user:
-            send_reset_email(user)  # Enviar correo con el enlace para restablecer la contraseña
+            send_reset_email(user)  
             flash('Email enviado con instrucciones a su correo', 'success')
             return redirect(url_for('auth.login'))
         else:
-            flash('Correo no encontrado', 'danger')  # Punto de depuración
+            flash('Correo no encontrado', 'danger')  
     return render_template('forgot_password.html')
 
 # Restablecer Contraseña con token

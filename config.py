@@ -13,7 +13,7 @@ class config:
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
     MAIL_USERNAME = 'cafePregunta@outlook.com'  # Reemplaza con tu email de Outlook
-    MAIL_PASSWORD = 'cafeSerna0101*'  # Reemplaza con tu contraseña de Outlook
+    MAIL_PASSWORD = 'ZE4V8-WT2LX-82EVE-GXDQR-3F3E8'  # Reemplaza con tu contraseña de Outlook
     MAIL_DEFAULT_SENDER = 'cafePregunta@outlook.com' 
     # Configuración de Flask-User para el manejo de usuarios
 

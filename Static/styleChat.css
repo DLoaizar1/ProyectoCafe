@@ -87,3 +87,31 @@ button:hover {
     font-size: 1rem;
     color: #333;
 }
+
+.menu-vertical {
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.menu-vertical ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-vertical ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-vertical ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-vertical ul li a:hover {
+    background-color: #575757;
+}

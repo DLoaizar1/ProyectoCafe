@@ -1,0 +1,26 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleDashboard.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-vertical">
+            <ul>
+                <li><a href="{{ url_for('home.home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('dashboard.dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('auth.logout') }}">Salir</a></li> 
+            </ul>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <h1>Dashboard de Power BI</h1>
+        <iframe title="DashBoardCafe" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=c4d00c2a-66d1-44e3-89e7-0301daa435fe&autoAuth=true&ctid=5e8bf4ee-e029-4c31-9623-efde72ddf410" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+</body>
+</html>

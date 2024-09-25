@@ -4,6 +4,8 @@ from config import config
 from Controllers.home_controller import home_bp
 from Controllers.auth_controller import auth_bp
 from Controllers.chat_controler import chat_bp
+from Controllers.dashboard_controller import dashboard_bp
+
 from flask_mail import Mail
 mail = Mail()
 
@@ -19,6 +21,8 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(home_bp)  
     app.register_blueprint(chat_bp, url_prefix='/chat')
+    app.register_blueprint(dashboard_bp, url_prefix='/dashboard') 
+    
 
     return app
 

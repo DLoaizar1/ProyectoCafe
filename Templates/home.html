@@ -8,20 +8,40 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styleChat.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Chatbot de Café</h1>
-        <form action="{{ url_for('chat.chatbot') }}" method="POST">
-            <label for="question">Pregunta sobre el café:</label>
-            <input type="text" id="question" name="question" required>
-            <button type="submit">Enviar</button>
-        </form>
-        
-        {% if response %}
-            <div class="chat-response">
-                <h3>Respuesta del Chatbot:</h3>
-                <p>{{ response }}</p>
+    <div class="sidebar">
+        <div class="menu-vertical">
+            <ul>
+                <li><a href="{{ url_for('home.home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('dashboard.dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('auth.logout') }}">Salir</a></li> 
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="topbar">
+            <h1>Chatbot de Café</h1>
+        </div>
+
+        <div class="container">
+            <form action="{{ url_for('chat.chatbot') }}" method="POST">
+                <label for="question">Pregunta sobre el café:</label>
+                <input type="text" id="question" name="question" required>
+                <button type="submit">Enviar</button>
+            </form>
+            
+            {% if response %}
+                <div class="container">
+                    <h3>Respuesta del Chatbot:</h3>
+                    <p>{{ response }}</p>
+                </div>
+            {% endif %}
+        </div>
+        <div class="container">
+            <div class="chat-box">
+                Aquí aparecerán las respuestas del chatbot.
             </div>
-        {% endif %}
+        </div>
     </div>
 </body>
 </html>
