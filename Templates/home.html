@@ -1,10 +1,10 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot de Café</title>
+    <title>Coffee Chatbot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styleChat.css') }}">
 </head>
 <body>
@@ -18,30 +18,55 @@
         </div>
     </div>
 
-    <div class="main-content">
-        <div class="topbar">
-            <h1>Chatbot de Café</h1>
-        </div>
-
-        <div class="container">
-            <form action="{{ url_for('chat.chatbot') }}" method="POST">
-                <label for="question">Pregunta sobre el café:</label>
-                <input type="text" id="question" name="question" required>
-                <button type="submit">Enviar</button>
-            </form>
-            
-            {% if response %}
-                <div class="container">
-                    <h3>Respuesta del Chatbot:</h3>
-                    <p>{{ response }}</p>
-                </div>
-            {% endif %}
-        </div>
-        <div class="container">
-            <div class="chat-box">
-                Aquí aparecerán las respuestas del chatbot.
-            </div>
-        </div>
+    <div id="chatbox">
+        <h2>Chatbot del Café</h2>
+        <div id="messages"></div>
+        <form id="chat-form">
+            <input type="text" id="message" placeholder="Haz una pregunta..." required>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const message = document.getElementById('message').value;
+
+            // Mostrar la pregunta del usuario inmediatamente en el chat
+            const messagesDiv = document.getElementById('messages');
+            messagesDiv.innerHTML += `<div class="chat-message"><strong>Tú:</strong> ${message}</div>`;
+
+            try {
+                const response = await fetch('/chat/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'message': message
+                    })
+                });
+
+                const result = await response.json();
+
+                // Mostrar la respuesta del backend
+                if (result.answer) {
+                    messagesDiv.innerHTML += `<div class="chat-message"><strong>Chatbot:</strong> ${result.answer}</div>`;
+                } else if (result.error) {
+                    // Mostrar el error que viene del backend si existe
+                    messagesDiv.innerHTML += `<div class="chat-message"><strong>Chatbot:</strong> Error: ${result.error}</div>`;
+                } else {
+                    // Si no hay ni 'answer' ni 'error'
+                    messagesDiv.innerHTML += `<div class="chat-message"><strong>Chatbot:</strong> No response available.</div>`;
+                }
+            } catch (err) {
+                // En caso de error al hacer fetch o procesar la respuesta
+                messagesDiv.innerHTML += `<div class="chat-message"><strong>Chatbot:</strong> There was an error processing your request.</div>`;
+            }
+            // Limpiar el input
+            document.getElementById('message').value = '';
+        });
+    </script>
 </body>
+
 </html>
