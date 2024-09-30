@@ -1,0 +1,120 @@
+república democrática popular lao,lao peoples democratic republic
+laos,lao peoples democratic republic
+finlandia,finland
+ruanda,rwanda
+liberia,liberia
+guatemala,guatemala
+angola,angola
+uganda,uganda
+italia,italy
+brasil,brazil
+república democrática del congo,democratic republic of congo
+congo (rdc),democratic republic of congo
+países bajos,netherlands
+holanda,netherlands
+estados unidos de américa,united states of america
+estados unidos,united states of america
+eeuu,united states of america
+camerún,cameroon
+madagascar,madagascar
+sri lanka,sri lanka
+indonesia,indonesia
+jamaica,jamaica
+filipinas,philippines
+alemania,germany
+cuba,cuba
+lituania,lithuania
+hungría,hungary
+chipre,cyprus
+malaui,malawi
+malawi,malawi
+suiza,switzerland
+estonia,estonia
+ecuador,ecuador
+nigeria,nigeria
+el salvador,el salvador
+malta,malta
+etiopía,ethiopia
+etiopia,ethiopia
+reino unido,united kingdom
+gran bretaña,united kingdom
+inglaterra,united kingdom
+méxico,mexico
+mexico,mexico
+sierra leona,sierra leone
+suecia,sweden
+honduras,honduras
+vietnam,viet nam
+viet nam,viet nam
+nicaragua,nicaragua
+kenia,kenya
+unión europea,unspecified eu stocks
+europa,unspecified eu stocks
+existencias no especificadas de la ue,unspecified eu stocks
+perú,peru
+peru,peru
+chequia,czechia
+república checa,czechia
+india,india
+costa de marfil,côte d ivoire
+cote d ivoire,côte d ivoire
+marfil,côte d ivoire
+croacia,croatia
+austria,austria
+grecia,greece
+timor oriental,timor-leste
+timor leste,timor-leste
+guinea ecuatorial,equatorial guinea
+trinidad y tobago,trinidad & tobago
+bélgica/luxemburgo,belgium/luxembourg
+belgica/luxemburgo,belgium/luxembourg
+zimbabue,zimbabwe
+polonia,poland
+bulgaria,bulgaria
+república centroafricana,central african republic
+togo,togo
+burundi,burundi
+guayana,guyana
+eslovenia,slovenia
+túnez,tunisia
+tunez,tunisia
+haití,haiti
+haiti,haiti
+irlanda,ireland
+letonia,latvia
+eslovaquia,slovakia
+gabón,gabon
+gabon,gabon
+guinea,guinea
+tailandia,thailand
+noruega,norway
+francia,france
+república dominicana,dominican republic
+dominicana,dominican republic
+luxemburgo,luxembourg
+bélgica,belgium
+belgica,belgium
+japón,japan
+japon,japan
+yemen,yemen
+españa,spain
+papúa nueva guinea,papua new guinea
+papua nueva guinea,papua new guinea
+venezuela,venezuela
+congo,congo
+ghana,ghana
+gana,ghana
+dinamarca,denmark
+rumania,romania
+colombia,colombia
+panamá,panama
+panama,panama
+bolivia,bolivia
+tanzania,tanzania
+nepal,nepal
+federación rusa,russian federation
+rusia,russian federation
+zambia,zambia
+portugal,portugal
+costa rica,costa rica
+paraguay,paraguay

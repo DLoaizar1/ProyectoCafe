@@ -1,0 +1,115 @@
+producción,Production
+producir,Production
+produjo,Production
+producido,Production
+produce,Production
+produciendo,Production
+producirá,Production
+producirán,Production
+produjeron,Production
+se producirá,Production
+se producirán,Production
+será producido,Production
+serán producidos,Production
+fue producido,Production
+fueron producidos,Production
+produzca,Production
+produzcan,Production
+exportación,Export
+exportar,Export
+exportó,Export
+exportado,Export
+exporta,Export
+exportando,Export
+exportará,Export
+exportarán,Export
+exportaron,Export
+se exportará,Export
+se exportarán,Export
+será exportado,Export
+serán exportados,Export
+fue exportado,Export
+fueron exportados,Export
+exporte,Export
+exporten,Export
+exportaciones,Export
+importación,Import
+importar,Import
+importó,Import
+importado,Import
+importa,Import
+importando,Import
+importará,Import
+importarán,Import
+importaron,Import
+se importará,Import
+se importarán,Import
+será importado,Import
+serán importados,Import
+fue importado,Import
+fueron importados,Import
+importe,Import
+importen,Import
+importaciones,Import
+consumo doméstico,Domestic Consumption
+consumo,Domestic Consumption
+consumió,Domestic Consumption
+consumido,Domestic Consumption
+consume,Domestic Consumption
+consumiendo,Domestic Consumption
+consumirá,Domestic Consumption
+consumirán,Domestic Consumption
+consumieron,Domestic Consumption
+se consumirá,Domestic Consumption
+se consumirán,Domestic Consumption
+será consumido,Domestic Consumption
+serán consumidos,Domestic Consumption
+fue consumido,Domestic Consumption
+fueron consumidos,Domestic Consumption
+consuma,Domestic Consumption
+consuman,Domestic Consumption
+inventarios de café verde,Green Coffee Inventories
+inventario,Green Coffee Inventories
+existencias de café verde,Green Coffee Inventories
+almacén de café verde,Green Coffee Inventories
+stock de café verde,Green Coffee Inventories
+inventario de café verde,Green Coffee Inventories
+inventarios,Green Coffee Inventories
+almacenes,Green Coffee Inventories
+stocks,Green Coffee Inventories
+existencias,Green Coffee Inventories
+reexportación,Re export
+reexportar,Re export
+reexportó,Re export
+reexportado,Re export
+reexporta,Re export
+reexportando,Re export
+reexportará,Re export
+reexportarán,Re export
+reexportaron,Re export
+se reexportará,Re export
+se reexportarán,Re export
+será reexportado,Re export
+serán reexportados,Re export
+fue reexportado,Re export
+fueron reexportados,Re export
+reexporte,Re export
+reexporten,Re export
+reexportaciones,Re export
+importación para consumo,Import for Consumption
+importaciones para consumo,Import for Consumption
+importó para consumo,Import for Consumption
+importado para consumo,Import for Consumption
+importa para consumo,Import for Consumption
+importando para consumo,Import for Consumption
+importará para consumo,Import for Consumption
+importarán para consumo,Import for Consumption
+importaron para consumo,Import for Consumption
+se importará para consumo,Import for Consumption
+se importarán para consumo,Import for Consumption
+será importado para consumo,Import for Consumption
+serán importados para consumo,Import for Consumption
+fue importado para consumo,Import for Consumption
+fueron importados para consumo,Import for Consumption
+importe para consumo,Import for Consumption
+importen para consumo,Import for Consumption
