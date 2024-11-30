@@ -8,7 +8,7 @@ import pandas as pd
 chat_bp = Blueprint('chat', __name__)
 
 try:
-    df = pd.read_csv('D:/Users/loaiz/Desktop/Tesis/CoffeeDataUnified.csv')
+    df = pd.read_csv('C:/Users/Fernando/OneDrive/Desktop/ProyectoCafe-master/CoffeeDataUnified.csv')
     print("Archivo CSV cargado con éxito.")
     
     coffee_model = CoffeeModel(df)
@@ -18,7 +18,7 @@ except Exception as e:
     print(f"Error al cargar el archivo CSV o entrenar los modelos: {e}")
     coffee_model = None  
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 @chat_bp.route("/ask", methods=["POST"])
 def ask_question():

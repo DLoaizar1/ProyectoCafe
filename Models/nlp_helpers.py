@@ -21,8 +21,8 @@ def load_translations(file_path):
         print(f"Archivo no encontrado: {file_path}")
     return translations
 
-COUNTRY_TRANSLATIONS_PATH = r'D:\Users\loaiz\Desktop\Tesis\country_translations.txt'
-METRIC_TRANSLATIONS_PATH = r'D:\Users\loaiz\Desktop\Tesis\metric_translation.txt'
+COUNTRY_TRANSLATIONS_PATH = r'C:\Users\Fernando\OneDrive\Desktop\ProyectoCafe-master\country_translations.txt'
+METRIC_TRANSLATIONS_PATH = r'C:\Users\Fernando\OneDrive\Desktop\ProyectoCafe-master\metric_translation.txt'
 
 country_translations = load_translations(COUNTRY_TRANSLATIONS_PATH)
 metric_translations = load_translations(METRIC_TRANSLATIONS_PATH)

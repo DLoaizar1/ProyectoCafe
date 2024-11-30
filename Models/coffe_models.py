@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from Models.nlp_helpers import clean_year_format
+from sklearn.metrics import r2_score
 
 class CoffeeModel:
     def __init__(self, coffee_data):
@@ -58,6 +59,13 @@ class CoffeeModel:
                     model = LinearRegression()
                     model.fit(X_train, y_train)
 
+                    y_pred = model.predict(X_test)
+
+                    # Cálculo del R² score
+                    r2 = r2_score(y_test, y_pred)
+                    print(f"Modelo entrenado para la métrica '{metric}'.")
+                    print(f"El R² score del modelo es: {r2:.4f}")
+
                     self.models[metric] = model
                     print(f"Modelo entrenado para la métrica '{metric}'.")
 
@@ -66,6 +74,8 @@ class CoffeeModel:
                     raise Exception("No models were trained.")
 
                 print("Todos los modelos se han entrenado correctamente.")
+                
+                
             else:
                 raise ValueError("Se esperaba un DataFrame de pandas.")
 
